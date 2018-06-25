@@ -1,0 +1,11 @@
+{
+    "elements": {},
+    "attributes": {
+        "ui-sref-active": {
+            "context": "a"
+        },
+        "ui-sref": {
+            "context": "a"
+        }
+    }
+}
