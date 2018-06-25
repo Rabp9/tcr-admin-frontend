@@ -1,3 +1,23 @@
+.when('/contactenos', {
+  templateUrl: 'views/contactenos.html',
+  controller: 'ContactenosCtrl',
+  controllerAs: 'contactenos'
+})
+.when('/galeria', {
+  templateUrl: 'views/galeria.html',
+  controller: 'GaleriaCtrl',
+  controllerAs: 'galeria'
+})
+.when('/eventos', {
+  templateUrl: 'views/eventos.html',
+  controller: 'EventosCtrl',
+  controllerAs: 'eventos'
+})
+.when('/infos', {
+  templateUrl: 'views/infos.html',
+  controller: 'InfosCtrl',
+  controllerAs: 'infos'
+})
 'use strict';
 
 /**
