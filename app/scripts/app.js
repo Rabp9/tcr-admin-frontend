@@ -1,23 +1,3 @@
-.when('/contactenos', {
-  templateUrl: 'views/contactenos.html',
-  controller: 'ContactenosCtrl',
-  controllerAs: 'contactenos'
-})
-.when('/galeria', {
-  templateUrl: 'views/galeria.html',
-  controller: 'GaleriaCtrl',
-  controllerAs: 'galeria'
-})
-.when('/eventos', {
-  templateUrl: 'views/eventos.html',
-  controller: 'EventosCtrl',
-  controllerAs: 'eventos'
-})
-.when('/infos', {
-  templateUrl: 'views/infos.html',
-  controller: 'InfosCtrl',
-  controllerAs: 'infos'
-})
 'use strict';
 
 /**
@@ -65,79 +45,42 @@ angular
         title: 'Información General'
     };
     
-    var categoriesState = {
-        name: 'categories',
-        url: '/categories',
-        templateUrl: 'views/categories.html',
-        controller: 'CategoriesCtrl',
-        controllerAs: 'categories',
-        title: 'Categorías'
+    var eventosState = {
+        name: 'eventos',
+        url: '/eventos',
+        templateUrl: 'views/eventos.html',
+        controller: 'EventosCtrl',
+        controllerAs: 'eventos',
+        title: 'Eventos'
     };
     
-    var postsState = {
-        name: 'posts',
-        url: '/posts',
-        templateUrl: 'views/posts.html',
-        controller: 'PostsCtrl',
-        controllerAs: 'posts',
-        title: 'Posts'
-    };
-    /*
-    var clientesState = {
-        name: 'clientes',
-        url: '/clientes',
-        templateUrl: 'views/clientes.html',
-        controller: 'ClientesCtrl',
-        controllerAs: 'clientes',
-        title: 'Clientes'
+    var galeriaState = {
+        name: 'galeria',
+        url: '/galeria',
+        templateUrl: 'views/galeria.html',
+        controller: 'GaleriaCtrl',
+        controllerAs: 'galeria',
+        title: 'Galeria'
     };
     
-    var serviciosState = {
-        name: 'servicios',
-        url: '/servicios',
-        templateUrl: 'views/servicios.html',
-        controller: 'ServiciosCtrl',
-        controllerAs: 'servicios',
-        title: 'Servicios'
+    var contactenosState = {
+        name: 'contactenos',
+        url: '/contactenos',
+        templateUrl: 'views/contactenos.html',
+        controller: 'ContactenosCtrl',
+        controllerAs: 'contactenos',
+        title: 'Contactenos'
     };
     
-    var noticiasState = {
-        name: 'noticias',
-        url: '/noticias',
-        templateUrl: 'views/noticias.html',
-        controller: 'NoticiasCtrl',
-        controllerAs: 'noticias',
-        title: 'Noticias'
+    var emailsState = {
+        name: 'emails',
+        url: '/emails',
+        templateUrl: 'views/emails.html',
+        controller: 'EmailsCtrl',
+        controllerAs: 'emails',
+        title: 'Emails'
     };
     
-    var rolesState = {
-        name: 'roles',
-        url: '/roles',
-        templateUrl: 'views/roles.html',
-        controller: 'RolesCtrl',
-        controllerAs: 'roles',
-        title: 'Roles'
-    };
-        
-    var directorioState = {
-        name: 'directorio',
-        url: '/directorio',
-        templateUrl: 'views/directorio.html',
-        controller: 'DirectorioCtrl',
-        controllerAs: 'directorio',
-        title: 'Directorio'
-    };
-    
-    var cabecerasState = {
-        name: 'cabeceras',
-        url: '/cabeceras',
-        templateUrl: 'views/cabeceras.html',
-        controller: 'CabecerasCtrl',
-        controllerAs: 'cabeceras',
-        title: 'Cabeceras'
-    };
-    */
-   
     var usersState = {
         name: 'users',
         url: '/users',
@@ -158,14 +101,10 @@ angular
     
     $stateProvider.state(mainState);
     $stateProvider.state(infosState);
-    $stateProvider.state(categoriesState);
-    $stateProvider.state(postsState);
-    /*$stateProvider.state(clientesState);
-    $stateProvider.state(serviciosState);
-    $stateProvider.state(noticiasState);
-    $stateProvider.state(directorioState);
-    $stateProvider.state(cabecerasState);
-    $stateProvider.state(rolesState);*/
+    $stateProvider.state(eventosState);
+    $stateProvider.state(galeriaState);
+    $stateProvider.state(contactenosState);
+    $stateProvider.state(emailsState);
     $stateProvider.state(usersState);
     $stateProvider.state(usersLoginState);
     $urlRouterProvider.when('', '/');
