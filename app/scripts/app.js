@@ -26,7 +26,7 @@ angular
     'angular-toArrayFilter'
 ])
 .config(function($stateProvider, $urlRouterProvider, $httpProvider) {
-    // $httpProvider.interceptors.push('oAuthHttpInterceptor');
+    $httpProvider.interceptors.push('oAuthHttpInterceptor');
     var mainState = {
         name: 'main',
         url: '/',
