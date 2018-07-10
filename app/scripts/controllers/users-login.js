@@ -14,7 +14,7 @@ angular.module('tcrAdminFrontendApp')
     $scope.loginUser = function(user, boton) {
         $('#' + boton).text('Login...');
         $utilsViewService.disable('#' + boton);
-        
+        console.log(user);
         usersService.login(user, function(data) {
             if (!data.user) {
                 $scope.message = data.message;

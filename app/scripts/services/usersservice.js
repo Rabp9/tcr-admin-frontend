@@ -12,15 +12,15 @@ angular.module('tcrAdminFrontendApp')
     return $resource(envService.getHost() + 'users/:id.json', {}, {
         getPersonas: {
             method: 'GET',
-            url: envService.getHost() + 'users/getPersonas/.json'
+            url: envService.getHost() + 'users/getPersonas.json'
         },
         login: {
             method: 'POST',
-            url: envService.getHost() + 'users/token/.json',
+            url: envService.getHost() + 'users/token.json'
         },
         getAdmin: {
             method: 'GET',
-            url: envService.getHost() + 'users/getAdmin/.json',
+            url: envService.getHost() + 'users/getAdmin.json'
         }
     });
 });
