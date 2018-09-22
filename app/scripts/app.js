@@ -99,6 +99,15 @@ angular
         title: 'Login'
     };
     
+    var sliderState = {
+        name: 'slider',
+        url: '/slider',
+        templateUrl: 'views/slider.html',
+        controller: 'SlidernCtrl',
+        controllerAs: 'slider',
+        title: 'Slider'
+    };
+    
     $stateProvider.state(mainState);
     $stateProvider.state(infosState);
     $stateProvider.state(eventosState);
@@ -107,6 +116,7 @@ angular
     $stateProvider.state(emailsState);
     $stateProvider.state(usersState);
     $stateProvider.state(usersLoginState);
+    $stateProvider.state(sliderState);
     $urlRouterProvider.when('', '/');
 })
 .run(function($rootScope, $state, $cookies, $location, $window, envService) {
@@ -132,7 +142,7 @@ angular
     } else {
         $rootScope.logged = false;
     }
-    
+    console.log($rootScope.user);
     $rootScope.$on('$stateChangeStart', 
     function(event, toState, toParams, fromState, fromParams, options) {
         if (fromState.name === '' && toState.name === 'login') {

@@ -2,7 +2,7 @@
 <html ng-app="tcrAdminFrontendApp">
 <head>
     <meta charset="utf-8">
-    <title ng-bind="title + ' | Trujillo Cletear Rutear - Administrador'">Sàcate 20 en Programaciòn - Administrador</title>
+    <title ng-bind="title + ' | Trujillo Cletear Rutear - Administrador'">Trujillo Cletear Rutear - Administrador</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -29,7 +29,7 @@
             <ul class="sidebar-nav" ng-cloak>
                 <li class="sidebar-brand">
                     <a class="navbar-brand" ng-href="#/">
-                        <img class="img-responsive" src="images/tcr-logo.png" alt="In Excelsis Deo"/>
+                        <img class="img-responsive" src="images/tcr-logo.png" alt="Trujillo Cletear Rutear"/>
                     </a>
                 </li>
                 <li style="color: gray;">
@@ -39,22 +39,16 @@
                     <a ui-sref-active="active" ui-sref="infos">Información General</a>
                 </li>
                 <li>
-                    <a ui-sref-active="active" ui-sref="categories">Categorías</a>
-                </li>
-                <li>
-                    <a ui-sref-active="active" ui-sref="posts">Posts</a>
-                </li>
-                <li>
-                    <a ui-sref-active="active" ui-sref="emails">Emails</a>
-                </li>
-                <li>
-                    <a ui-sref-active="active" ui-sref="galeria">Galería</a>
-                </li>
-                <li>
-                    <a ui-sref-active="active" ui-sref="contactenos">Contáctenos</a>
+                    <a ui-sref-active="active" ui-sref="slider">Slider</a>
                 </li>
                 <li>
                     <a ui-sref-active="active" ui-sref="eventos">Eventos</a>
+                </li>
+                <li>
+                    <a ui-sref-active="active" ui-sref="contactos">Contactos</a>
+                </li>
+                <li>
+                    <a ui-sref-active="active" ui-sref="galeria">Galería</a>
                 </li>
                 <li>
                     <a ui-sref-active="active" ui-sref="users">Usuarios</a>
@@ -79,7 +73,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" ng-href="#/">
-                        <img class="logo-brand img-responsive" src="images/logo.png" alt="In Excelsis Deo"/>
+                        <img class="logo-brand img-responsive" src="images/tcr-logo.png" alt="Trujillo Cletear Rutear"/>
                     </a>
               </div>
 
@@ -128,7 +122,6 @@
         <!-- Page Content -->
         <div id="page-content-wrapper">
             <div class="container-fluid">
-                
                 <div id="dvMessageRoot" class="alert alert-dismissible dvHidden" ng-class="{'alert-success': message_root.type === 'success', 'alert-danger': message_root.type === 'error'}" role="alert" ng-show="message_root.type !== undefined">
                     <button type="button" class="close" ng-click="message_root.type = undefined" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     {{ message_root.text }} 
